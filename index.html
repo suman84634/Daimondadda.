@@ -1,0 +1,15 @@
+<!-- Winner name page -->
+<!DOCTYPE html>
+<html>
+<head><title>DaimondAdda</title></head>
+<body>
+<h1>🏆 This Month's Winner:</h1>
+<p id='winner-name'>Loading...</p>
+<script>
+fetch('winner-name.json').then(res => res.json()).then(data => {
+document.getElementById('winner-name').innerText = data.name;
+});
+</script>
+<a href='help-centre.html' style='position:fixed;top:10px;right:10px;'>Help Centre</a>
+</body>
+</html>
